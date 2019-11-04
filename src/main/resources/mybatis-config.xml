@@ -9,6 +9,13 @@
         <property name="username" value="root"/>
         <property name="password" value="1234"/>
     </properties>
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+    <typeAliases>
+<!--        <typeAlias alias="User" type="entity.User"/>-->
+        <package name="entity"/>
+    </typeAliases>
     <!--  环境，可以配置多个，default：指定采用哪个环境  -->
     <environments default="test">
         <!-- id:唯一标识 -->
@@ -36,5 +43,6 @@
     <mappers>
         <mapper resource="mapper/mymapper.xml"/>
         <mapper resource="mapper/UserDaoMapper.xml"/>
+        <mapper resource="mapper/UserMapper.xml"/>
     </mappers>
 </configuration>
